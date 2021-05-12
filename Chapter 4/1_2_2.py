@@ -22,7 +22,7 @@ def RandomizedMotifSearch(Dna, k, t):
 # and any subroutines that these functions need.
 def RandomMotifs(Dna, k, t):
     M = len(Dna[0])-k
-    return [ d[random.randint(1, M):][:k] for d in Dna ]
+    return [ d[random.randint(0, M):][:k] for d in Dna ]
 
 def CountWithPseudocounts(Motifs):    
     m, n = len(Motifs), len(Motifs[0])
